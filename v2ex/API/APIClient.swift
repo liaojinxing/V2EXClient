@@ -20,11 +20,19 @@ class APIClient {
         return Static.instance
     }
     
-    func getLatestTopics() {
-        Alamofire.request(.GET, APIRootURL + "topics/latest.json")
-            .responseJSON { (_, _, JSON, _) in
-                println(JSON)
+    func getJSONData(path: NSString, parameters: [String : AnyObject]?, success: (JSON) -> Void, failure: (NSError) -> Void) {
+        Alamofire.request(.GET, APIRootURL + path, parameters: parameters)
+            .responseSwiftyJSON { (request, response, json, error) in
+                if let err = error? {
+                    failure(err)
+                } else {
+                    success(json)
+                }
         }
     }
     
+    func getLatestTopics(success: (JSON) -> Void, failure: (NSError) -> Void) {
+        self.getJSONData("topics/latest.json", parameters: nil, success: success, failure: failure)
+    }
+
 }

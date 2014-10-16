@@ -8,13 +8,19 @@
 
 import UIKit
 
-class TopicsViewController: UITableViewController {
+class TopicsViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "V2ex"
 
-        APIClient.sharedInstance.getLatestTopics()
+        APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
+            if json.type == Type.Array {
+                self.datasource = json.arrayValue
+            }
+        }, failure: { (error) -> Void in
+            print(error)
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,11 +29,17 @@ class TopicsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        if (self.datasource != nil) {
+            println(self.datasource.count)
+            return self.datasource.count
+        }
+        return 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(TopicCellID) as? TopicCell
+        let json = self.datasource[indexPath.row] as JSON
+        cell?.titleLabel.text = json["title"].stringValue
         return cell!
     }
 

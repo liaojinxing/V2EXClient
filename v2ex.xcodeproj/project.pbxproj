@@ -16,6 +16,9 @@
 		C7690AE619EFC0B40010AF47 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690AE519EFC0B40010AF47 /* TopicCell.swift */; };
 		C7690AEC19EFC16E0010AF47 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690AEB19EFC16E0010AF47 /* APIClient.swift */; };
 		C7690AF919EFC70C0010AF47 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C7690AF319EFC6760010AF47 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7690AFE19EFCABF0010AF47 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690AFD19EFCABF0010AF47 /* SwiftyJSON.swift */; };
+		C7690B0019EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690AFF19EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift */; };
+		C7690B0219EFD16E0010AF47 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690B0119EFD16E0010AF47 /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		C7690AE519EFC0B40010AF47 /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicCell.swift; path = View/TopicCell.swift; sourceTree = "<group>"; };
 		C7690AEB19EFC16E0010AF47 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = API/APIClient.swift; sourceTree = "<group>"; };
 		C7690AED19EFC6760010AF47 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		C7690AFD19EFCABF0010AF47 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		C7690AFF19EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
+		C7690B0119EFD16E0010AF47 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = Controller/BaseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		C7690AA319EFADDA0010AF47 /* v2ex */ = {
 			isa = PBXGroup;
 			children = (
+				C7690AFB19EFCABF0010AF47 /* ThirdParty */,
 				C7690AD719EFBE490010AF47 /* API */,
 				C7690AD619EFBDE50010AF47 /* App */,
 				C7690AD519EFBDE10010AF47 /* Model */,
@@ -170,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				C7690AE319EFC0AD0010AF47 /* TopicsViewController.swift */,
+				C7690B0119EFD16E0010AF47 /* BaseTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -211,6 +219,23 @@
 				C7690AF519EFC6760010AF47 /* AlamofireTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7690AFB19EFCABF0010AF47 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				C7690AFC19EFCABF0010AF47 /* SwiftyJSON */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		C7690AFC19EFCABF0010AF47 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				C7690AFF19EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift */,
+				C7690AFD19EFCABF0010AF47 /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +366,9 @@
 				C7690AE419EFC0AD0010AF47 /* TopicsViewController.swift in Sources */,
 				C7690AE619EFC0B40010AF47 /* TopicCell.swift in Sources */,
 				C7690AEC19EFC16E0010AF47 /* APIClient.swift in Sources */,
+				C7690B0219EFD16E0010AF47 /* BaseTableViewController.swift in Sources */,
+				C7690AFE19EFCABF0010AF47 /* SwiftyJSON.swift in Sources */,
+				C7690B0019EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift in Sources */,
 				C7690AA719EFADDA0010AF47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
