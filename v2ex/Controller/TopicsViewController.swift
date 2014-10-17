@@ -16,18 +16,19 @@ class TopicsViewController: BaseTableViewController {
         super.viewDidLoad()
         self.title = "V2EX"
         
+        self.sendRequest()
+    }
+    
+    func sendRequest() {
         APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
+            self.refreshing = false
             if json.type == Type.Array {
                 self.datasource = json.arrayValue
             }
-        }, failure: { (error) -> Void in
-            print(error)
+            }, failure: { (error) -> Void in
+                self.refreshing = false
+                print(error)
         })
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,11 +39,25 @@ class TopicsViewController: BaseTableViewController {
         return 0
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60;
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(TopicCellID) as? TopicCell
         let json = self.datasource[indexPath.row] as JSON
         cell?.titleLabel.text = json["title"].stringValue
+        var avatarURL = "http:" + json["member"]["avatar_large"].stringValue
+        cell?.avatarImageView.sd_setImageWithURL(NSURL(string: avatarURL), placeholderImage:UIImage(named: "avatar_normal"))
         return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func onPullToFresh() {
+        self.sendRequest()
     }
 
 }

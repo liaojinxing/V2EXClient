@@ -14,6 +14,7 @@ let TopicCellID = "TopicCellID"
 class TopicCell: UITableViewCell {
     
     @IBOutlet var titleLabel : UILabel! = nil
+    @IBOutlet var avatarImageView : UIImageView! = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()

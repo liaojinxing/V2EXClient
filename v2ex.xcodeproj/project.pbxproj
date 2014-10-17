@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C702288F19F100EB00D99C38 /* avatar_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C702288E19F100EB00D99C38 /* avatar_normal@2x.png */; };
+		C702289219F1041300D99C38 /* UIColorV2EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702289119F1041300D99C38 /* UIColorV2EX.swift */; };
 		C7690AA719EFADDA0010AF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690AA619EFADDA0010AF47 /* AppDelegate.swift */; };
 		C7690AAC19EFADDA0010AF47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7690AAA19EFADDA0010AF47 /* Main.storyboard */; };
 		C7690AAE19EFADDA0010AF47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7690AAD19EFADDA0010AF47 /* Images.xcassets */; };
@@ -97,6 +99,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C702288E19F100EB00D99C38 /* avatar_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar_normal@2x.png"; sourceTree = "<group>"; };
+		C702289119F1041300D99C38 /* UIColorV2EX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorV2EX.swift; path = Skin/UIColorV2EX.swift; sourceTree = "<group>"; };
 		C7690AA119EFADDA0010AF47 /* v2ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = v2ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7690AA519EFADDA0010AF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7690AA619EFADDA0010AF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C702288819F1000E00D99C38 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C702288D19F100EB00D99C38 /* images */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		C702288D19F100EB00D99C38 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C702288E19F100EB00D99C38 /* avatar_normal@2x.png */,
+			);
+			name = images;
+			path = Resource/images;
+			sourceTree = "<group>";
+		};
 		C7690A9819EFADDA0010AF47 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +183,7 @@
 		C7690AA319EFADDA0010AF47 /* v2ex */ = {
 			isa = PBXGroup;
 			children = (
+				C702288819F1000E00D99C38 /* Resource */,
 				C7690AFB19EFCABF0010AF47 /* ThirdParty */,
 				C7690AD719EFBE490010AF47 /* API */,
 				C7690AD619EFBDE50010AF47 /* App */,
@@ -206,6 +228,7 @@
 		C7690AD219EFBDD00010AF47 /* Skin */ = {
 			isa = PBXGroup;
 			children = (
+				C702289119F1041300D99C38 /* UIColorV2EX.swift */,
 			);
 			name = Skin;
 			sourceTree = "<group>";
@@ -417,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C702288F19F100EB00D99C38 /* avatar_normal@2x.png in Resources */,
 				C7690AAC19EFADDA0010AF47 /* Main.storyboard in Resources */,
 				C7690AB119EFADDA0010AF47 /* LaunchScreen.xib in Resources */,
 				C7690AAE19EFADDA0010AF47 /* Images.xcassets in Resources */,
@@ -443,6 +467,7 @@
 				C7690B0219EFD16E0010AF47 /* BaseTableViewController.swift in Sources */,
 				C7690AFE19EFCABF0010AF47 /* SwiftyJSON.swift in Sources */,
 				C7690B0019EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift in Sources */,
+				C702289219F1041300D99C38 /* UIColorV2EX.swift in Sources */,
 				C7690AA719EFADDA0010AF47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

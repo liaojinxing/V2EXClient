@@ -18,7 +18,7 @@ public class BaseTableViewController: UITableViewController {
             }
             else {
                 self.refreshControl?.endRefreshing()
-                self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+                self.refreshControl?.attributedTitle = NSAttributedString(string: "正在刷新...")
             }
         }
     }
@@ -33,6 +33,6 @@ public class BaseTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.refreshControl = UIRefreshControl()
-        //self.refreshControl?.addTarget(self, action: "onPullToFresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl?.addTarget(self, action: "onPullToFresh", forControlEvents: UIControlEvents.ValueChanged)
     }
 }

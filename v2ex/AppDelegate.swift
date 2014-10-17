@@ -15,8 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        self.setupStyle()
         return true
+    }
+    
+    func setupStyle() {
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+        UINavigationBar.appearance().barTintColor = UIColor.V2EXColor()
+        UINavigationBar.appearance().translucent = true
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 16.0)]
     }
 
     func applicationWillResignActive(application: UIApplication) {

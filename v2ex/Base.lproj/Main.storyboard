@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lCC-5t-bNy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lCC-5t-bNy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -14,25 +14,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCellID" id="cwJ-lU-qOK" customClass="TopicCell" customModule="v2ex" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicCellID" rowHeight="80" id="cwJ-lU-qOK" customClass="TopicCell" customModule="v2ex" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cwJ-lU-qOK" id="0XH-5u-NrS">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你好" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbv-PS-Moo">
-                                            <rect key="frame" x="15" y="11.5" width="570" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你好" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbv-PS-Moo">
+                                            <rect key="frame" x="55" y="29" width="530" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eru-HH-SXx">
+                                            <rect key="frame" x="15" y="15" width="30" height="49.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="ELg-9t-3cf"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Dbv-PS-Moo" firstAttribute="leading" secondItem="0XH-5u-NrS" secondAttribute="leadingMargin" constant="7" id="bbP-R2-oUa"/>
+                                        <constraint firstItem="Eru-HH-SXx" firstAttribute="top" secondItem="0XH-5u-NrS" secondAttribute="topMargin" constant="7" id="Lf9-4R-lm5"/>
+                                        <constraint firstItem="Dbv-PS-Moo" firstAttribute="leading" secondItem="Eru-HH-SXx" secondAttribute="trailing" constant="10" id="TY6-9u-htG"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Eru-HH-SXx" secondAttribute="bottom" constant="7" id="VIZ-18-3OF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Eru-HH-SXx" secondAttribute="bottom" constant="7" id="anr-uO-xXS"/>
                                         <constraint firstAttribute="centerY" secondItem="Dbv-PS-Moo" secondAttribute="centerY" id="qFf-kq-ZAf"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Dbv-PS-Moo" secondAttribute="trailing" constant="7" id="qfH-2b-Mwh"/>
+                                        <constraint firstItem="Eru-HH-SXx" firstAttribute="leading" secondItem="0XH-5u-NrS" secondAttribute="leadingMargin" constant="7" id="qlU-aE-22W"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="anr-uO-xXS"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="avatarImageView" destination="Eru-HH-SXx" id="wVd-2g-qnE"/>
                                     <outlet property="titleLabel" destination="Dbv-PS-Moo" id="vmI-Uv-S5f"/>
                                 </connections>
                             </tableViewCell>
@@ -46,6 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x70-aW-wks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="383" y="295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EsV-RO-DkG">
