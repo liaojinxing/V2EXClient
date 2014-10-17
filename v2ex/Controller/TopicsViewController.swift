@@ -20,6 +20,7 @@ class TopicsViewController: BaseTableViewController {
     }
     
     func sendRequest() {
+        self.refreshing = true
         APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
             self.refreshing = false
             if json.type == Type.Array {
@@ -53,6 +54,10 @@ class TopicsViewController: BaseTableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let json = self.datasource[indexPath.row] as JSON
+        var vc = TopicDetailViewController()
+        vc.json = json
+        self.navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     

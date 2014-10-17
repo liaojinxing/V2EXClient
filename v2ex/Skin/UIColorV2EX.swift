@@ -11,7 +11,7 @@ import Foundation
 extension UIColor {
     
     class func V2EXColor() -> UIColor {
-        return UIColor.colorWithHex(0x32b232)
+        return UIColor.colorWithHex(0x525252)
     }
     
     class func colorWithHex(rgbHexValue:NSInteger) -> UIColor{

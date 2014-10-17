@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class BaseTableViewController: UITableViewController {
+class BaseTableViewController: UITableViewController {
     
-    public var refreshing: Bool = false {
+    var refreshing: Bool = false {
         didSet {
             if (self.refreshing) {
                 self.refreshControl?.beginRefreshing()
-                self.refreshControl?.attributedTitle = NSAttributedString(string: "Loading...")
+                self.refreshControl?.attributedTitle = NSAttributedString(string: "刷新完成...")
             }
             else {
                 self.refreshControl?.endRefreshing()
@@ -23,13 +23,13 @@ public class BaseTableViewController: UITableViewController {
         }
     }
     
-    public var datasource: Array<JSON>! {
+    var datasource: Array<JSON>! {
         didSet {
             self.tableView.reloadData()
         }
     }
     
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         self.refreshControl = UIRefreshControl()
