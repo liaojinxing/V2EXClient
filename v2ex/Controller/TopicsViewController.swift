@@ -9,11 +9,13 @@
 import UIKit
 
 class TopicsViewController: BaseTableViewController {
+    
+    var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "V2ex"
-
+        self.title = "V2EX"
+        
         APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
             if json.type == Type.Array {
                 self.datasource = json.arrayValue
@@ -42,7 +44,6 @@ class TopicsViewController: BaseTableViewController {
         cell?.titleLabel.text = json["title"].stringValue
         return cell!
     }
-
 
 }
 

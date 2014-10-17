@@ -19,6 +19,8 @@
 		C7690AFE19EFCABF0010AF47 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690AFD19EFCABF0010AF47 /* SwiftyJSON.swift */; };
 		C7690B0019EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690AFF19EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift */; };
 		C7690B0219EFD16E0010AF47 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690B0119EFD16E0010AF47 /* BaseTableViewController.swift */; };
+		C7E816FF19F0DE340056E533 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E816FE19F0DE340056E533 /* ImageIO.framework */; };
+		C7E8170419F0DF430056E533 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E816F919F0DDDF0056E533 /* libSDWebImage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = Alamofire;
+		};
+		C7E816F819F0DDDF0056E533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53761325155AD0D5005750A4;
+			remoteInfo = SDWebImage;
+		};
+		C7E816FA19F0DDDF0056E533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537D95C117ECC1FE0097C263;
+			remoteInfo = "SDWebImage+WebP";
+		};
+		C7E816FC19F0DDDF0056E533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 531041E0157EAFA400BBABC3;
+			remoteInfo = "SDWebImage+MKAnnotation";
+		};
+		C7E8170519F0DF4A0056E533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 53761307155AD0D5005750A4;
+			remoteInfo = SDWebImage;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -83,6 +113,9 @@
 		C7690AFD19EFCABF0010AF47 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		C7690AFF19EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		C7690B0119EFD16E0010AF47 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = Controller/BaseTableViewController.swift; sourceTree = "<group>"; };
+		C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = SDWebImage/SDWebImage.xcodeproj; sourceTree = "<group>"; };
+		C7E816FE19F0DE340056E533 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C7E8170019F0DEB00056E533 /* v2ex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "v2ex-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E8170419F0DF430056E533 /* libSDWebImage.a in Frameworks */,
+				C7E816FF19F0DE340056E533 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +141,8 @@
 		C7690A9819EFADDA0010AF47 = {
 			isa = PBXGroup;
 			children = (
+				C7E816FE19F0DE340056E533 /* ImageIO.framework */,
+				C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */,
 				C7690AA319EFADDA0010AF47 /* v2ex */,
 				C7690AB919EFADDA0010AF47 /* v2exTests */,
 				C7690AA219EFADDA0010AF47 /* Products */,
@@ -208,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				C7690AEB19EFC16E0010AF47 /* APIClient.swift */,
+				C7E8170019F0DEB00056E533 /* v2ex-Bridging-Header.h */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -238,6 +276,16 @@
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
+		C7E816F119F0DDDF0056E533 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7E816F919F0DDDF0056E533 /* libSDWebImage.a */,
+				C7E816FB19F0DDDF0056E533 /* libSDWebImage+WebP.a */,
+				C7E816FD19F0DDDF0056E533 /* libSDWebImage+MKAnnotation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,6 +301,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C7E8170619F0DF4A0056E533 /* PBXTargetDependency */,
 				C7690AF719EFC6A40010AF47 /* PBXTargetDependency */,
 			);
 			name = v2ex;
@@ -312,6 +361,10 @@
 					ProductGroup = C7690AEE19EFC6760010AF47 /* Products */;
 					ProjectRef = C7690AED19EFC6760010AF47 /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = C7E816F119F0DDDF0056E533 /* Products */;
+					ProjectRef = C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -334,6 +387,27 @@
 			fileType = wrapper.cfbundle;
 			path = AlamofireTests.xctest;
 			remoteRef = C7690AF419EFC6760010AF47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7E816F919F0DDDF0056E533 /* libSDWebImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDWebImage.a;
+			remoteRef = C7E816F819F0DDDF0056E533 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7E816FB19F0DDDF0056E533 /* libSDWebImage+WebP.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSDWebImage+WebP.a";
+			remoteRef = C7E816FA19F0DDDF0056E533 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C7E816FD19F0DDDF0056E533 /* libSDWebImage+MKAnnotation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSDWebImage+MKAnnotation.a";
+			remoteRef = C7E816FC19F0DDDF0056E533 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -393,6 +467,11 @@
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			targetProxy = C7690AF619EFC6A40010AF47 /* PBXContainerItemProxy */;
+		};
+		C7E8170619F0DF4A0056E533 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			targetProxy = C7E8170519F0DF4A0056E533 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -497,10 +576,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = v2ex/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "v2ex/v2ex-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -508,10 +591,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = v2ex/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "v2ex/v2ex-Bridging-Header.h";
 			};
 			name = Release;
 		};
