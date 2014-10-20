@@ -14,7 +14,7 @@ class BaseTableViewController: UITableViewController {
         didSet {
             if (self.refreshing) {
                 self.refreshControl?.beginRefreshing()
-                self.refreshControl?.attributedTitle = NSAttributedString(string: "刷新完成...")
+                self.refreshControl?.attributedTitle = NSAttributedString(string: "正在刷新...")
             }
             else {
                 self.refreshControl?.endRefreshing()

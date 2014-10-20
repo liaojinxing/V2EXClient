@@ -12,35 +12,52 @@ class TopicDetailHeaderView: UIView {
 
     @IBOutlet var titleLabel: UILabel! = nil
     @IBOutlet var detailLabel: UILabel! = nil
+    @IBOutlet var avatarImageView: UIImageView! = nil
+    @IBOutlet var authorLabel: UILabel! = nil
+    
     
     override func awakeFromNib() {
-        self.titleLabel.font = UIFont.boldSystemFontOfSize(19)
-        self.detailLabel.font = UIFont.systemFontOfSize(17)
+        self.titleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.detailLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.avatarImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.authorLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
     }
     
     var title: String? {
         didSet {
             self.titleLabel.text = title?
-            print(title)
-            self.setNeedsLayout()
-            self.layoutIfNeeded()
+        }
+    }
+    
+    var avatarURL: String? {
+        didSet {
+            self.avatarImageView.sd_setImageWithURL(NSURL(string: avatarURL!), placeholderImage: UIImage(named: "avatar_normal"))
         }
     }
 
+    var author: String? {
+        didSet {
+            self.authorLabel.text = author?
+        }
+    }
+    
     var content: String? {
         didSet {
             self.detailLabel.text = content?
             self.titleLabel.text = self.title
+            self.setNeedsUpdateConstraints()
+            self.updateConstraintsIfNeeded()
             self.setNeedsLayout()
             self.layoutIfNeeded()
-            self.setFrameHeight(CGRectGetMaxY(self.detailLabel.frame) + 20)
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.titleLabel.preferredMaxLayoutWidth = self.titleLabel.frame.size.width
-        self.detailLabel.preferredMaxLayoutWidth = self.detailLabel.frame.size.width
+        self.titleLabel.preferredMaxLayoutWidth = self.titleLabel.bounds.size.width
+        self.detailLabel.preferredMaxLayoutWidth = self.detailLabel.bounds.size.width
+        self.authorLabel.preferredMaxLayoutWidth = self.authorLabel.bounds.size.width
+        self.setFrameHeight(CGRectGetMaxY(self.detailLabel.frame) + 36)
     }
-
 }

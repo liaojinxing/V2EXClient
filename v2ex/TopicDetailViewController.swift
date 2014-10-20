@@ -12,18 +12,28 @@ class TopicDetailViewController: BaseTableViewController {
     
     var json : JSON!
     var referenceCell: ReplyCell?
+    var headerView : TopicDetailHeaderView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var nibViews = NSBundle.mainBundle().loadNibNamed("TopicDetailHeaderView", owner: self, options: nil)
-        var headerView = nibViews.first as? TopicDetailHeaderView
-        headerView?.title = json["title"].stringValue
-        headerView?.content = json["content"].stringValue
-        self.tableView.tableHeaderView = headerView
+        self.headerView = nibViews.first as? TopicDetailHeaderView
+        self.headerView?.title = json["title"].stringValue
+        self.headerView?.avatarURL = "http:" + json["member"]["avatar_large"].stringValue
+        self.headerView?.author = json["member"]["username"].stringValue
+        self.headerView?.content = json["content"].stringValue
+        self.headerView?.setFrameHeight(1000)
+        self.tableView.tableHeaderView = self.headerView
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
         self.tableView.registerNib(UINib(nibName: "ReplyCell", bundle: nil), forCellReuseIdentifier: "ReplyCell")
         self.sendRequest()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.headerView?.setFrameHeight(CGRectGetMaxY((self.headerView?.detailLabel.frame)!) + 30)
+        self.tableView.tableHeaderView = self.headerView
     }
     
     func sendRequest() {
@@ -50,7 +60,11 @@ class TopicDetailViewController: BaseTableViewController {
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "讨论区";
+        if (self.datasource != nil && self.datasource.count != 0) {
+            return "讨论区"
+        } else {
+            return "暂无讨论"
+        }
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -79,4 +93,5 @@ class TopicDetailViewController: BaseTableViewController {
     func onPullToFresh() {
         self.sendRequest()
     }
+
 }
