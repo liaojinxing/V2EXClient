@@ -23,18 +23,17 @@ class TopicsViewController: BaseTableViewController {
         self.refreshing = true
         APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
             self.refreshing = false
+            print(json)
             if json.type == Type.Array {
                 self.datasource = json.arrayValue
             }
             }, failure: { (error) -> Void in
                 self.refreshing = false
-                print(error)
         })
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (self.datasource != nil) {
-            println(self.datasource.count)
             return self.datasource.count
         }
         return 0
