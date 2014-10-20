@@ -29,6 +29,8 @@
 		C7B4295E19F4D4FC00EE94A7 /* ReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B4295C19F4D4FC00EE94A7 /* ReplyCell.xib */; };
 		C7E816FF19F0DE340056E533 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E816FE19F0DE340056E533 /* ImageIO.framework */; };
 		C7E8170419F0DF430056E533 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E816F919F0DDDF0056E533 /* libSDWebImage.a */; };
+		C7EB864619F50D2100EA97A2 /* NodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864519F50D2100EA97A2 /* NodesViewController.swift */; };
+		C7EB864819F510C000EA97A2 /* NodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864719F510C000EA97A2 /* NodeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = SDWebImage/SDWebImage.xcodeproj; sourceTree = "<group>"; };
 		C7E816FE19F0DE340056E533 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		C7E8170019F0DEB00056E533 /* v2ex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "v2ex-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7EB864519F50D2100EA97A2 /* NodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodesViewController.swift; path = Controller/NodesViewController.swift; sourceTree = "<group>"; };
+		C7EB864719F510C000EA97A2 /* NodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeCell.swift; path = View/NodeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +256,7 @@
 				C7690AE319EFC0AD0010AF47 /* TopicsViewController.swift */,
 				C7690B0119EFD16E0010AF47 /* BaseTableViewController.swift */,
 				C702289319F10B4700D99C38 /* TopicDetailViewController.swift */,
+				C7EB864519F50D2100EA97A2 /* NodesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				C702289919F10C8000D99C38 /* TopicDetailHeaderView.xib */,
 				C7B4295B19F4D4FC00EE94A7 /* ReplyCell.swift */,
 				C7B4295C19F4D4FC00EE94A7 /* ReplyCell.xib */,
+				C7EB864719F510C000EA97A2 /* NodeCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -486,7 +492,9 @@
 				C7B4295D19F4D4FC00EE94A7 /* ReplyCell.swift in Sources */,
 				C7690AE619EFC0B40010AF47 /* TopicCell.swift in Sources */,
 				C7690AEC19EFC16E0010AF47 /* APIClient.swift in Sources */,
+				C7EB864819F510C000EA97A2 /* NodeCell.swift in Sources */,
 				C7690B0219EFD16E0010AF47 /* BaseTableViewController.swift in Sources */,
+				C7EB864619F50D2100EA97A2 /* NodesViewController.swift in Sources */,
 				C7690AFE19EFCABF0010AF47 /* SwiftyJSON.swift in Sources */,
 				C7690B0019EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift in Sources */,
 				C702289219F1041300D99C38 /* UIColorV2EX.swift in Sources */,

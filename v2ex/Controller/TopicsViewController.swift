@@ -14,16 +14,23 @@ class TopicsViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "V2EX"
+        self.title = "V2EX最新话题"
+        
+        let rightItem = UIBarButtonItem(title: "节点", style: UIBarButtonItemStyle.Plain, target: self, action: "selectNode")
+        self.navigationItem.rightBarButtonItem = rightItem
         
         self.sendRequest()
+    }
+    
+    func selectNode() {
+        let vc = NodesViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func sendRequest() {
         self.refreshing = true
         APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
             self.refreshing = false
-            print(json)
             if json.type == Type.Array {
                 self.datasource = json.arrayValue
             }
