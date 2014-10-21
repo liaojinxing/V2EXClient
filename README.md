@@ -12,6 +12,13 @@ Technology:
 -----------
 - Swift 开发
 
+TODO:
+----------
+- More features
+- Model refactoring
+
+Screenshots:
+-----------
 <img src="ScreenShot/hot.png" alt="列表" width="200px" hspace="10"/>
 <img src="ScreenShot/content.png" alt="内容" width="200px" hspace="10"/>
 <img src="ScreenShot/nodes.png" alt="节点" width="200px" hspace="10"/>
