@@ -9,11 +9,7 @@
 /* Begin PBXBuildFile section */
 		C702288F19F100EB00D99C38 /* avatar_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C702288E19F100EB00D99C38 /* avatar_normal@2x.png */; };
 		C702289219F1041300D99C38 /* UIColorV2EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702289119F1041300D99C38 /* UIColorV2EX.swift */; };
-		C702289519F10B4700D99C38 /* TopicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702289319F10B4700D99C38 /* TopicDetailViewController.swift */; };
 		C702289819F10C6B00D99C38 /* TopicDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702289719F10C6B00D99C38 /* TopicDetailHeaderView.swift */; };
-		C702289A19F10C8000D99C38 /* TopicDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C702289919F10C8000D99C38 /* TopicDetailHeaderView.xib */; };
-		C702289C19F10F2800D99C38 /* UIViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702289B19F10F2800D99C38 /* UIViewFrame.swift */; };
-		C7690AA719EFADDA0010AF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7690AA619EFADDA0010AF47 /* AppDelegate.swift */; };
 		C7690AAC19EFADDA0010AF47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7690AAA19EFADDA0010AF47 /* Main.storyboard */; };
 		C7690AAE19EFADDA0010AF47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7690AAD19EFADDA0010AF47 /* Images.xcassets */; };
 		C7690AB119EFADDA0010AF47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7690AAF19EFADDA0010AF47 /* LaunchScreen.xib */; };
@@ -33,6 +29,10 @@
 		C7EB864819F510C000EA97A2 /* NodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864719F510C000EA97A2 /* NodeCell.swift */; };
 		C7EB864A19F603FD00EA97A2 /* nodes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7EB864919F603FD00EA97A2 /* nodes@2x.png */; };
 		C7EB864C19F638A600EA97A2 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864B19F638A600EA97A2 /* AppContext.swift */; };
+		C7EB864F19F6803A00EA97A2 /* TopicDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7EB864D19F6803A00EA97A2 /* TopicDetailHeaderView.xib */; };
+		C7EB865019F6803A00EA97A2 /* UIViewFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864E19F6803A00EA97A2 /* UIViewFrame.swift */; };
+		C7EB865219F6804600EA97A2 /* TopicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB865119F6804600EA97A2 /* TopicDetailViewController.swift */; };
+		C7EB865419F6805900EA97A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB865319F6805900EA97A2 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,13 +111,9 @@
 /* Begin PBXFileReference section */
 		C702288E19F100EB00D99C38 /* avatar_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar_normal@2x.png"; sourceTree = "<group>"; };
 		C702289119F1041300D99C38 /* UIColorV2EX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorV2EX.swift; path = Skin/UIColorV2EX.swift; sourceTree = "<group>"; };
-		C702289319F10B4700D99C38 /* TopicDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailViewController.swift; sourceTree = "<group>"; };
 		C702289719F10C6B00D99C38 /* TopicDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicDetailHeaderView.swift; path = View/TopicDetailHeaderView.swift; sourceTree = "<group>"; };
-		C702289919F10C8000D99C38 /* TopicDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicDetailHeaderView.xib; sourceTree = "<group>"; };
-		C702289B19F10F2800D99C38 /* UIViewFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewFrame.swift; sourceTree = "<group>"; };
 		C7690AA119EFADDA0010AF47 /* v2ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = v2ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7690AA519EFADDA0010AF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7690AA619EFADDA0010AF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7690AAB19EFADDA0010AF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7690AAD19EFADDA0010AF47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7690AB019EFADDA0010AF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -135,11 +131,15 @@
 		C7B4295C19F4D4FC00EE94A7 /* ReplyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReplyCell.xib; path = View/ReplyCell.xib; sourceTree = "<group>"; };
 		C7E816F019F0DDDF0056E533 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = SDWebImage/SDWebImage.xcodeproj; sourceTree = "<group>"; };
 		C7E816FE19F0DE340056E533 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		C7E8170019F0DEB00056E533 /* v2ex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "v2ex-Bridging-Header.h"; sourceTree = "<group>"; };
 		C7EB864519F50D2100EA97A2 /* NodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodesViewController.swift; path = Controller/NodesViewController.swift; sourceTree = "<group>"; };
 		C7EB864719F510C000EA97A2 /* NodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeCell.swift; path = View/NodeCell.swift; sourceTree = "<group>"; };
 		C7EB864919F603FD00EA97A2 /* nodes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodes@2x.png"; sourceTree = "<group>"; };
 		C7EB864B19F638A600EA97A2 /* AppContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppContext.swift; path = App/AppContext.swift; sourceTree = "<group>"; };
+		C7EB864D19F6803A00EA97A2 /* TopicDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopicDetailHeaderView.xib; path = View/TopicDetailHeaderView.xib; sourceTree = "<group>"; };
+		C7EB864E19F6803A00EA97A2 /* UIViewFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewFrame.swift; path = View/UIViewFrame.swift; sourceTree = "<group>"; };
+		C7EB865119F6804600EA97A2 /* TopicDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicDetailViewController.swift; path = Controller/TopicDetailViewController.swift; sourceTree = "<group>"; };
+		C7EB865319F6805900EA97A2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = App/AppDelegate.swift; sourceTree = "<group>"; };
+		C7EB865519F6807E00EA97A2 /* v2ex-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "v2ex-Bridging-Header.h"; path = "App/v2ex-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +212,6 @@
 				C7690AD419EFBDDD0010AF47 /* View */,
 				C7690AD319EFBDD70010AF47 /* Controller */,
 				C7690AD219EFBDD00010AF47 /* Skin */,
-				C7690AA619EFADDA0010AF47 /* AppDelegate.swift */,
 				C7690AAA19EFADDA0010AF47 /* Main.storyboard */,
 				C7690AAD19EFADDA0010AF47 /* Images.xcassets */,
 				C7690AAF19EFADDA0010AF47 /* LaunchScreen.xib */,
@@ -250,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				C702289119F1041300D99C38 /* UIColorV2EX.swift */,
-				C702289B19F10F2800D99C38 /* UIViewFrame.swift */,
 			);
 			name = Skin;
 			sourceTree = "<group>";
@@ -258,9 +256,9 @@
 		C7690AD319EFBDD70010AF47 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C7EB865119F6804600EA97A2 /* TopicDetailViewController.swift */,
 				C7690AE319EFC0AD0010AF47 /* TopicsViewController.swift */,
 				C7690B0119EFD16E0010AF47 /* BaseTableViewController.swift */,
-				C702289319F10B4700D99C38 /* TopicDetailViewController.swift */,
 				C7EB864519F50D2100EA97A2 /* NodesViewController.swift */,
 			);
 			name = Controller;
@@ -269,9 +267,10 @@
 		C7690AD419EFBDDD0010AF47 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C7EB864D19F6803A00EA97A2 /* TopicDetailHeaderView.xib */,
+				C7EB864E19F6803A00EA97A2 /* UIViewFrame.swift */,
 				C7690AE519EFC0B40010AF47 /* TopicCell.swift */,
 				C702289719F10C6B00D99C38 /* TopicDetailHeaderView.swift */,
-				C702289919F10C8000D99C38 /* TopicDetailHeaderView.xib */,
 				C7B4295B19F4D4FC00EE94A7 /* ReplyCell.swift */,
 				C7B4295C19F4D4FC00EE94A7 /* ReplyCell.xib */,
 				C7EB864719F510C000EA97A2 /* NodeCell.swift */,
@@ -289,6 +288,8 @@
 		C7690AD619EFBDE50010AF47 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				C7EB865519F6807E00EA97A2 /* v2ex-Bridging-Header.h */,
+				C7EB865319F6805900EA97A2 /* AppDelegate.swift */,
 				C7EB864B19F638A600EA97A2 /* AppContext.swift */,
 			);
 			name = App;
@@ -298,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				C7690AEB19EFC16E0010AF47 /* APIClient.swift */,
-				C7E8170019F0DEB00056E533 /* v2ex-Bridging-Header.h */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -473,9 +473,9 @@
 				C702288F19F100EB00D99C38 /* avatar_normal@2x.png in Resources */,
 				C7690AAC19EFADDA0010AF47 /* Main.storyboard in Resources */,
 				C7B4295E19F4D4FC00EE94A7 /* ReplyCell.xib in Resources */,
+				C7EB864F19F6803A00EA97A2 /* TopicDetailHeaderView.xib in Resources */,
 				C7EB864A19F603FD00EA97A2 /* nodes@2x.png in Resources */,
 				C7690AB119EFADDA0010AF47 /* LaunchScreen.xib in Resources */,
-				C702289A19F10C8000D99C38 /* TopicDetailHeaderView.xib in Resources */,
 				C7690AAE19EFADDA0010AF47 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,9 +494,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7EB865019F6803A00EA97A2 /* UIViewFrame.swift in Sources */,
 				C7690AE419EFC0AD0010AF47 /* TopicsViewController.swift in Sources */,
 				C7EB864C19F638A600EA97A2 /* AppContext.swift in Sources */,
-				C702289519F10B4700D99C38 /* TopicDetailViewController.swift in Sources */,
+				C7EB865419F6805900EA97A2 /* AppDelegate.swift in Sources */,
 				C7B4295D19F4D4FC00EE94A7 /* ReplyCell.swift in Sources */,
 				C7690AE619EFC0B40010AF47 /* TopicCell.swift in Sources */,
 				C7690AEC19EFC16E0010AF47 /* APIClient.swift in Sources */,
@@ -505,10 +506,9 @@
 				C7EB864619F50D2100EA97A2 /* NodesViewController.swift in Sources */,
 				C7690AFE19EFCABF0010AF47 /* SwiftyJSON.swift in Sources */,
 				C7690B0019EFCD1C0010AF47 /* Alamofire-SwiftyJSON.swift in Sources */,
+				C7EB865219F6804600EA97A2 /* TopicDetailViewController.swift in Sources */,
 				C702289219F1041300D99C38 /* UIColorV2EX.swift in Sources */,
 				C702289819F10C6B00D99C38 /* TopicDetailHeaderView.swift in Sources */,
-				C702289C19F10F2800D99C38 /* UIViewFrame.swift in Sources */,
-				C7690AA719EFADDA0010AF47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,7 +647,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "v2ex/v2ex-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "v2ex/App/v2ex-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -662,7 +662,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "v2ex/v2ex-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "v2ex/App/v2ex-Bridging-Header.h";
 			};
 			name = Release;
 		};
