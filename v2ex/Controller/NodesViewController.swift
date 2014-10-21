@@ -59,7 +59,6 @@ class NodesViewController: UIViewController, UICollectionViewDataSource, UIColle
         return 0
     }
     
-    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("NodeCell", forIndexPath: indexPath) as NodeCell
         
@@ -79,5 +78,5 @@ class NodesViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
         collectionView.deselectItemAtIndexPath(indexPath, animated: true)
     }
-
+    
 }
