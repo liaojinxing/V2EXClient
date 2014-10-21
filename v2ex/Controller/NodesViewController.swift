@@ -27,7 +27,18 @@ class NodesViewController: UIViewController, UICollectionViewDataSource, UIColle
         self.collectionView?.delegate = self
         self.collectionView?.registerClass(NodeCell.self, forCellWithReuseIdentifier: "NodeCell")
         self.view.addSubview(self.collectionView!)
-        self.sendRequest()
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            var nodes = AppContext.sharedInstance.getNodes()
+            dispatch_async(dispatch_get_main_queue(), {
+                if let json = nodes? {
+                    self.dataArray = json.arrayValue
+                    self.collectionView?.reloadData()
+                } else {
+                    self.sendRequest()
+                }
+            })
+        })
     }
     
     func sendRequest() {
@@ -35,6 +46,7 @@ class NodesViewController: UIViewController, UICollectionViewDataSource, UIColle
             if json.type == Type.Array {
                 self.dataArray = json.arrayValue
                 self.collectionView?.reloadData()
+                AppContext.sharedInstance.saveNodes(json.object)
             }
             }) { (error) -> Void in
         }
@@ -63,8 +75,6 @@ class NodesViewController: UIViewController, UICollectionViewDataSource, UIColle
             let json = array[indexPath.row]
             var vc = TopicsViewController()
             vc.nodeJSON = json
-            print(json.object)
-            print(json.type)
             self.navigationController?.pushViewController(vc, animated: true)
         }
         collectionView.deselectItemAtIndexPath(indexPath, animated: true)

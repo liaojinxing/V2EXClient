@@ -32,6 +32,7 @@
 		C7EB864619F50D2100EA97A2 /* NodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864519F50D2100EA97A2 /* NodesViewController.swift */; };
 		C7EB864819F510C000EA97A2 /* NodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864719F510C000EA97A2 /* NodeCell.swift */; };
 		C7EB864A19F603FD00EA97A2 /* nodes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7EB864919F603FD00EA97A2 /* nodes@2x.png */; };
+		C7EB864C19F638A600EA97A2 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864B19F638A600EA97A2 /* AppContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		C7EB864519F50D2100EA97A2 /* NodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodesViewController.swift; path = Controller/NodesViewController.swift; sourceTree = "<group>"; };
 		C7EB864719F510C000EA97A2 /* NodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeCell.swift; path = View/NodeCell.swift; sourceTree = "<group>"; };
 		C7EB864919F603FD00EA97A2 /* nodes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodes@2x.png"; sourceTree = "<group>"; };
+		C7EB864B19F638A600EA97A2 /* AppContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppContext.swift; path = App/AppContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 		C7690AD619EFBDE50010AF47 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				C7EB864B19F638A600EA97A2 /* AppContext.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7690AE419EFC0AD0010AF47 /* TopicsViewController.swift in Sources */,
+				C7EB864C19F638A600EA97A2 /* AppContext.swift in Sources */,
 				C702289519F10B4700D99C38 /* TopicDetailViewController.swift in Sources */,
 				C7B4295D19F4D4FC00EE94A7 /* ReplyCell.swift in Sources */,
 				C7690AE619EFC0B40010AF47 /* TopicCell.swift in Sources */,
