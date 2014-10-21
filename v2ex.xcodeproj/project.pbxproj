@@ -31,6 +31,7 @@
 		C7E8170419F0DF430056E533 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E816F919F0DDDF0056E533 /* libSDWebImage.a */; };
 		C7EB864619F50D2100EA97A2 /* NodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864519F50D2100EA97A2 /* NodesViewController.swift */; };
 		C7EB864819F510C000EA97A2 /* NodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EB864719F510C000EA97A2 /* NodeCell.swift */; };
+		C7EB864A19F603FD00EA97A2 /* nodes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7EB864919F603FD00EA97A2 /* nodes@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		C7E8170019F0DEB00056E533 /* v2ex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "v2ex-Bridging-Header.h"; sourceTree = "<group>"; };
 		C7EB864519F50D2100EA97A2 /* NodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodesViewController.swift; path = Controller/NodesViewController.swift; sourceTree = "<group>"; };
 		C7EB864719F510C000EA97A2 /* NodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeCell.swift; path = View/NodeCell.swift; sourceTree = "<group>"; };
+		C7EB864919F603FD00EA97A2 /* nodes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodes@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		C702288D19F100EB00D99C38 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C7EB864919F603FD00EA97A2 /* nodes@2x.png */,
 				C702288E19F100EB00D99C38 /* avatar_normal@2x.png */,
 			);
 			name = images;
@@ -467,6 +470,7 @@
 				C702288F19F100EB00D99C38 /* avatar_normal@2x.png in Resources */,
 				C7690AAC19EFADDA0010AF47 /* Main.storyboard in Resources */,
 				C7B4295E19F4D4FC00EE94A7 /* ReplyCell.xib in Resources */,
+				C7EB864A19F603FD00EA97A2 /* nodes@2x.png in Resources */,
 				C7690AB119EFADDA0010AF47 /* LaunchScreen.xib in Resources */,
 				C702289A19F10C8000D99C38 /* TopicDetailHeaderView.xib in Resources */,
 				C7690AAE19EFADDA0010AF47 /* Images.xcassets in Resources */,

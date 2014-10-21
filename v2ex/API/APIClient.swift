@@ -32,7 +32,7 @@ class APIClient {
     }
     
     func getLatestTopics(success: (JSON) -> Void, failure: (NSError) -> Void) {
-        self.getJSONData("topics/latest.json", parameters: nil, success: success, failure: failure)
+        self.getJSONData("topics/hot.json", parameters: nil, success: success, failure: failure)
     }
     
     func getLatestTopics(nodeID: NSString, success: (JSON) -> Void, failure: (NSError) -> Void) {

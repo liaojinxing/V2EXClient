@@ -18,12 +18,13 @@ class TopicsViewController: BaseTableViewController {
         if let node = self.nodeJSON? {
             self.title = node["title"].stringValue
         } else {
-            self.title = "V2EX最新话题"
+            self.title = "V2EX最热"
         }
         if nodeJSON == nil {
-            let rightItem = UIBarButtonItem(title: "节点", style: UIBarButtonItemStyle.Plain, target: self, action: "selectNode")
+            let rightItem = UIBarButtonItem(image: UIImage(named: "nodes"), style: UIBarButtonItemStyle.Plain, target: self, action: "selectNode")
             self.navigationItem.rightBarButtonItem = rightItem
         }
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
         self.sendRequest()
     }
     
