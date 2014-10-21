@@ -11,14 +11,19 @@ import UIKit
 class TopicsViewController: BaseTableViewController {
     
     var imageView: UIImageView!
+    var nodeJSON: JSON? // Node
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "V2EX最新话题"
-        
-        let rightItem = UIBarButtonItem(title: "节点", style: UIBarButtonItemStyle.Plain, target: self, action: "selectNode")
-        self.navigationItem.rightBarButtonItem = rightItem
-        
+        if let node = self.nodeJSON? {
+            self.title = node["title"].stringValue
+        } else {
+            self.title = "V2EX最新话题"
+        }
+        if nodeJSON == nil {
+            let rightItem = UIBarButtonItem(title: "节点", style: UIBarButtonItemStyle.Plain, target: self, action: "selectNode")
+            self.navigationItem.rightBarButtonItem = rightItem
+        }
         self.sendRequest()
     }
     
@@ -29,14 +34,25 @@ class TopicsViewController: BaseTableViewController {
     
     func sendRequest() {
         self.refreshing = true
-        APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
-            self.refreshing = false
-            if json.type == Type.Array {
-                self.datasource = json.arrayValue
-            }
+        if let node = self.nodeJSON? {
+            APIClient.sharedInstance.getLatestTopics(node["id"].stringValue, success: { (json) -> Void in
+                self.refreshing = false
+                if json.type == Type.Array {
+                    self.datasource = json.arrayValue
+                }
             }, failure: { (error) -> Void in
                 self.refreshing = false
-        })
+            })
+        } else {
+            APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
+                    self.refreshing = false
+                    if json.type == Type.Array {
+                        self.datasource = json.arrayValue
+                    }
+                }, failure: { (error) -> Void in
+                    self.refreshing = false
+            })
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,6 +68,11 @@ class TopicsViewController: BaseTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(TopicCellID) as? TopicCell
+        
+        if cell == nil {
+            cell = TopicCell(style: .Default, reuseIdentifier: TopicCellID)
+        }
+
         let json = self.datasource[indexPath.row] as JSON
         cell?.titleLabel.text = json["title"].stringValue
         var avatarURL = "http:" + json["member"]["avatar_large"].stringValue

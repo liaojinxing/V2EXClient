@@ -61,7 +61,9 @@ class NodesViewController: UIViewController, UICollectionViewDataSource, UIColle
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if let array = self.dataArray? {
             let json = array[indexPath.row]
-            
+            var vc = TopicsViewController()
+            vc.nodeJSON = json
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         collectionView.deselectItemAtIndexPath(indexPath, animated: true)
     }

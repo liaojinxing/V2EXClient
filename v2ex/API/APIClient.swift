@@ -35,6 +35,11 @@ class APIClient {
         self.getJSONData("topics/latest.json", parameters: nil, success: success, failure: failure)
     }
     
+    func getLatestTopics(nodeID: NSString, success: (JSON) -> Void, failure: (NSError) -> Void) {
+        let dict = ["node_id": nodeID]
+        self.getJSONData("topics/show.json", parameters: dict, success: success, failure: failure)
+    }
+    
     func getReplies(topicID: NSString, success: (JSON) -> Void, failure: (NSError) -> Void) {
         let dict = ["topic_id": topicID]
         self.getJSONData("replies/show.json", parameters: dict, success: success, failure: failure)
