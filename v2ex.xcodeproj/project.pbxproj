@@ -391,6 +391,7 @@
 				TargetAttributes = {
 					C7690AA019EFADDA0010AF47 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 8CMA73KN4U;
 					};
 					C7690AB519EFADDA0010AF47 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -642,11 +643,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Liao Jinxing (WFC59XXUQC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Liao Jinxing (WFC59XXUQC)";
 				INFOPLIST_FILE = v2ex/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "v2ex/App/v2ex-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -657,11 +661,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liao Jinxing (8CMA73KN4U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Liao Jinxing (8CMA73KN4U)";
 				INFOPLIST_FILE = v2ex/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "v2ex/App/v2ex-Bridging-Header.h";
 			};
 			name = Release;

@@ -25,6 +25,7 @@ class TopicsViewController: BaseTableViewController {
             self.navigationItem.rightBarButtonItem = rightItem
         }
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        self.refreshing = true
         self.sendRequest()
     }
     
@@ -34,8 +35,8 @@ class TopicsViewController: BaseTableViewController {
     }
     
     func sendRequest() {
-        self.refreshing = true
         if let node = self.nodeJSON? {
+            self.refreshing = true
             APIClient.sharedInstance.getLatestTopics(node["id"].stringValue, success: { (json) -> Void in
                 self.refreshing = false
                 if json.type == Type.Array {
@@ -45,6 +46,7 @@ class TopicsViewController: BaseTableViewController {
                 self.refreshing = false
             })
         } else {
+            self.refreshing = true
             APIClient.sharedInstance.getLatestTopics({ (json) -> Void in
                     self.refreshing = false
                     if json.type == Type.Array {
