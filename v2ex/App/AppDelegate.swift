@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor.V2EXColor()
         UINavigationBar.appearance().translucent = true
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSFontAttributeName: UIFont(name: "Helvetica Neue", size: 16.0)]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
 
     func applicationWillResignActive(application: UIApplication) {
