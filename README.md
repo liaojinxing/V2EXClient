@@ -31,6 +31,8 @@ Links
 -------------
 个人其他开源项目:
 
+- 支持任意类型的URL Router:[LJURLRouter]
+
 - 自动轮播banner:[LJAutoScrollView]
 
 - 懒人笔记客户端:[Voice2Note]
@@ -56,4 +58,5 @@ Links
 [RichStyleLabel]:https://github.com/liaojinxing/RichStyleLabel
 [EasyImage]:https://github.com/liaojinxing/EasyImage
 [AutoLayout]:https://github.com/liaojinxing/Autolayout
+[LJURLRouter]:https://github.com/liaojinxing/LJURLRouter
 [Voice2Note]:https://github.com/liaojinxing/Voice2Note
